@@ -5,7 +5,7 @@ require(apsimx)
 require(FME)
 require(rapsimng)
 
-## apsimx_options("")
+apsimx_options("../apsim.sif")
 
 argumentos <- xargs_apsimx(
   single.threaded = TRUE,
