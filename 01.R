@@ -20,8 +20,8 @@ system("singularity exec /home/uqasever/apsim.sif Models simulation.apsimx --sin
 
 ## system("singularity exec /home/uqasever/apsim.sif Models simulation.apsimx")
 
-simulaciones <- apsimx::read_apsimx("simulation.db")
+simulaciones <- apsimx::read_apsimx("simulation.db") %>% clean_names()
 
-simulaciones %>% clean_names() %>% saveRDS("simulaciones.rds")
+simulaciones %>% saveRDS("simulaciones.rds")
 
 simulaciones %>% head() %>% print()
