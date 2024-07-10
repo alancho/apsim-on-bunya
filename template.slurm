@@ -7,8 +7,8 @@
 #SBATCH --time=1:00:00
 #SBATCH --partition=general
 #SBATCH --account=a_chenu
-#SBATCH -o slurm-%j.output
-#SBATCH -e slurm-%j.error
+#SBATCH -o slurm.output
+#SBATCH -e slurm.error
 
 module load r/4.3.3-gfbf-2023a
 
