@@ -4,6 +4,7 @@ require(tidyverse)
 require(apsimx)
 require(FME)
 require(rapsimng)
+require(janitor)
 
 ## apsimx_options("../apsim.sif")
 
@@ -14,12 +15,13 @@ require(rapsimng)
 
 ## simulaciones <- apsimx("simulation.apsimx", cleanup = TRUE, xargs = argumentos)
 
+system("singularity exec /home/uqasever/apsim.sif Models --upgrade simulation.apsimx")
 system("singularity exec /home/uqasever/apsim.sif Models simulation.apsimx --single-threaded --cpu-count=1")
 
 ## system("singularity exec /home/uqasever/apsim.sif Models simulation.apsimx")
 
 simulaciones <- apsimx::read_apsimx("simulation.db")
 
-simulaciones %>% saveRDS("simulaciones.rds")
+simulaciones %>% clean_names() %>% saveRDS("simulaciones.rds")
 
 simulaciones %>% head() %>% print()
