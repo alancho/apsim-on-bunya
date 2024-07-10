@@ -18,8 +18,8 @@ require(rapsimng)
 
 system("singularity exec /home/uqasever/apsim.sif Models simulation.apsimx")
 
-simulaciones <- read_apsimx("simulation.db")
+## simulaciones <- read_apsimx("simulation.db")
 
-simulaciones %>% saveRDS("simulaciones.rds")
+## simulaciones %>% saveRDS("simulaciones.rds")
 
-simulaciones %>% head() %>% print()
+## simulaciones %>% head() %>% print()
