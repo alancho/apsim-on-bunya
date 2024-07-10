@@ -9,6 +9,7 @@
 #SBATCH --account=a_chenu
 #SBATCH -o slurm.output
 #SBATCH -e slurm.error
+#SBATCH --singularity-container apsim.sif
 
 module load r/4.3.3-gfbf-2023a
 
