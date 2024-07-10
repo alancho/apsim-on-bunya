@@ -19,3 +19,5 @@ system("singularity exec apsim.sif simulation.apsimx --single-threaded --cpu-cou
 simulaciones <- read_apsimx("simulation.db")
 
 simulaciones %>% saveRDS("simulaciones.rds")
+
+simulaciones %>% head() %>% print()
