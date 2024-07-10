@@ -3,10 +3,9 @@
 require(tidyverse)
 require(apsimx)
 require(FME)
-require(BayesianTools)
 require(rapsimng)
 
-## apsimx_options("~/ApsimX/bin/Release/net6.0/Models")
+## apsimx_options("")
 
 argumentos <- xargs_apsimx(
   single.threaded = TRUE,
