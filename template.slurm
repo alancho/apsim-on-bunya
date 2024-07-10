@@ -2,7 +2,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --mem=10G
+#SBATCH --mem=5G
 #SBATCH --job-name=apsimx-test
 #SBATCH --time=1:00:00
 #SBATCH --partition=general
@@ -12,4 +12,4 @@
 
 module load r/4.3.3-gfbf-2023a
 
-Rscript 01.R
+srun Rscript 01.R
