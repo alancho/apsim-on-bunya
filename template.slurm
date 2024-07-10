@@ -6,7 +6,7 @@
 #SBATCH --job-name=apsimx-test
 #SBATCH --time=1:00:00
 #SBATCH --partition=general
-#SBATCH --account=a_chanu
+#SBATCH --account=a_chenu
 #SBATCH -o slurm-%j.output
 #SBATCH -e slurm-%j.error
 
