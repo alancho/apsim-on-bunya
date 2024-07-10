@@ -14,7 +14,7 @@ require(rapsimng)
 
 ## simulaciones <- apsimx("simulation.apsimx", cleanup = TRUE, xargs = argumentos)
 
-system("singularity exec ../apsim.sif simulation.apsimx --single-threaded --cpu-count=1")
+system("singularity exec apsim.sif simulation.apsimx --single-threaded --cpu-count=1")
 
 simulaciones <- read_apsimx("simulation.db")
 
